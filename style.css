@@ -139,6 +139,7 @@ header{
     width: 100%;
     color: hsl(180, 8%, 52%);
     place-self: center;
+    text-align: center;
 }
 .clear:hover{
     text-decoration: underline;

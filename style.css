@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 500;
+}
+header{
+    overflow: hidden;
+    height: 90px;
+    background-color: hsl(180, 29%, 50%);
+}
+.avatar{
+    width:70px;
+}
+.name{
+    color:hsl(180, 29%, 50%);
+    font-size: 18px;
+    padding-right: 5px;
+}
+.new{
+    color:white;
+    padding:5px 8px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color:hsl(180, 8%, 52%);
+    font-size: 15px;
+    font-weight: 700;
+}
+.featured{
+    color:white;
+    padding:5px 8px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color:hsl(180, 14%, 20%);
+    font-size: 15px;
+    font-weight: 700;
+}
+.role{
+    font-size: 24px;
+    font-weight: 700;
+}
+.card-part1{
+    display: flex;
+    align-items: center;
+    gap:30px;
+}
+.card-part1 ul{
+    display: flex;
+    align-items: center;
+    color:hsl(180, 29%, 50%);
+    flex-wrap: wrap;
+}
+.card-part1 ul li{
+    margin-right: 30px;
+    margin-bottom: 8px;
+}
+.middle-part-1{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:8px;
+}
+.card-middle-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: center;
+}
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* place-items: center; */
+    max-width: 1000px;
+    min-width: 500px;
+    margin:0 auto;
+    margin-top:40px;
+    padding: 40px 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 12px;
+    flex-wrap: wrap;
+}
+.skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.skills li{
+    margin-right:12px;
+    list-style-type: none;
+    background-color:  hsl(180, 52%, 96%);
+    color:hsl(180, 8%, 52%);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+.details li{
+    list-style-type:circle;
+}
+.card-part1 ul li:nth-child(1){
+    list-style-type: none;
+}
+.card-featured{
+    border-left:4px solid hsl(180, 8%, 52%);
+}
+.main{
+    padding-bottom: 80px;
+}
+
+@media (max-width:800px){
+    .card{
+        grid-template-columns: 1fr;
+        width:fit-content;
+        position: relative;
+        place-items: start;
+        margin-top:80px;
+    }
+    .skills{
+        justify-content: start;
+    }
+    .avatar{
+        position: absolute;
+        top:-40px;
+        left:30px;
+    }
+    .skills li{
+        margin-top: 8px;
+    }
+}
+@media (max-width:500px){
+    .card{
+        min-width: 100%;
+    }
+}

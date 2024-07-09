@@ -7,9 +7,13 @@
     font-weight: 500;
 }
 header{
-    overflow: hidden;
     height: 90px;
     background-color: hsl(180, 29%, 50%);
+}
+header img{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
 }
 .avatar{
     width:70px;
@@ -22,10 +26,11 @@ header{
 .new{
     color:white;
     padding:5px 8px;
+    display:flex;
     width: fit-content;
     border-radius: 10px;
     background-color:hsl(180, 8%, 52%);
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 700;
 }
 .featured{
@@ -34,7 +39,7 @@ header{
     width: fit-content;
     border-radius: 10px;
     background-color:hsl(180, 14%, 20%);
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 700;
 }
 .role{
@@ -66,7 +71,6 @@ header{
     display: flex;
     flex-direction: column;
     gap:10px;
-    justify-content: center;
 }
 .card{
     display: grid;
@@ -95,6 +99,11 @@ header{
     padding: 5px 10px;
     border-radius: 8px;
 }
+.skills li:hover{
+    background-color: hsl(180, 8%, 52%);
+    color:white;
+    cursor:pointer;
+}
 .details li{
     list-style-type:circle;
 }
@@ -107,7 +116,62 @@ header{
 .main{
     padding-bottom: 80px;
 }
-
+header{
+    position:relative;
+}
+.filters-container{
+    display:grid;
+    width:80%;
+    grid-template-columns: 80% 20%;
+    position: absolute;
+    top: 40px;
+    margin-top:20px;
+    padding:20px 40px;
+    left:50%;
+    transform: translate(-50%,0%);
+    z-index: 2;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 12px;
+    display: none;
+}
+.clear{
+    width: 100%;
+    color: hsl(180, 8%, 52%);
+    place-self: center;
+}
+.clear:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+.filters{
+    gap:20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.close{
+    background-color: hsl(180, 8%, 52%);
+    width:fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:5px;
+    border-radius: 2px;
+}
+.close:hover{
+    background-color: hsl(180, 14%, 20%);
+    cursor:pointer;
+}
+.filter{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    color: hsl(180, 8%, 52%);
+    background-color:hsl(180, 52%, 96%);
+    padding-left:5px;
+    border-radius: 2px;
+}
 @media (max-width:800px){
     .card{
         grid-template-columns: 1fr;

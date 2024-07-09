@@ -52,7 +52,7 @@ function render() {
     root.innerHTML = '';
 
     window.data.forEach((item) => {
-        const matchesFilter = filterArray.length === 0 || filterArray.some(filter => 
+        const matchesFilter = filterArray.length === 0 || filterArray.every(filter => 
             filter === item.role || 
             filter === item.level || 
             item.languages.includes(filter) || 
